@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: 20pt Arial;
+            background-color: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    
+    *Função dispara dentro do HTML*
+    
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="saiu()">
+        Interaja...
+    </div>   
+    -->
+    
+    <!--Função disparada pelo JavaScript-->
+    
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        /*Usando o comando a.addEventListener('')*/
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', saiu)
+
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.backgroundColor = 'orange'
+        }
+
+        function entrar () {
+            a.innerText = 'O mouse entrou!'
+        }
+
+        function saiu() {
+            a.innerText = 'O mouse saiu!'
+            a.style.backgroundColor = 'green'
+        }
+    </script>
+</body>
+</html>
