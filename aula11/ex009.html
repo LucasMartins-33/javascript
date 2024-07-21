@@ -14,22 +14,23 @@
 <body>
     <h1>Nacionalidade brasileira</h1>
     <p>Vamos verificar se você é brasileiro ou estrangeiro</p>
-    Qual país você nasceu: <input type="text" name="txtpais" id="txtpais">
+    Qual país você nasceu: <input type="text" name="pais" id="pais">
     <input type="button" value="verificar" onclick="verificar()">
     <div id="res">
 
     </div>
     <script>
         function verificar() {
-            var pais = window.document.querySelector('input#txtpais')
+            var pais = window.document.querySelector('input#pais').value
             var res = window.document.querySelector('div#res')
-            resposta.innerHTML(`<p>Você nasceu na(o) ${pais}</p>`)
+            console.dir(res)
+            res.innerHTML = `<p>Você nasceu na(o) ${pais}</p>`
              if (pais != 'Brasil'){
-                resposta.innerHTML += (`<p>Você é estrangeiro</p>`)
+                res.innerHTML += `<p>Você é estrangeiro</p>`
              }
 
              else {
-                resposta.innerHTML += (`<p>Você é brasileiro</p>`)
+                res.innerHTML += `<p>Você é brasileiro</p>`
              }
         }
 
