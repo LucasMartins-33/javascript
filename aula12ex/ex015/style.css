@@ -1,0 +1,47 @@
+@charset "UTF-8";
+:root {
+    --cor0: white;
+    --cor1: #094162;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, Sans-serif;
+    --fonte-footer: italic;
+}
+
+body {
+    background-color: var(--cor1);
+    font: var(--fonte-padrao);
+    font-size: 15pt;
+    font-weight: normal;
+}
+
+header {
+    text-align: center;
+    color: var(--cor0);
+}
+
+section {
+    background-color: var(--cor0);
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.39);
+
+}
+
+/*Faz o corte da imagem e deixa ela circular*/
+img {
+    display: block;
+    padding: 20px;
+    margin: auto;
+    max-width: 100%;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+
+footer {
+    font-style: var(--fonte-footer);
+    text-align: center;
+    color: var(--cor0);
+}
