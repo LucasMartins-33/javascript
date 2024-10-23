@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade brasileira</h1>
+    <p>Vamos verificar se você é um brasileiro ou estrangeiro.</p>
+    Qual país você nasceu: <input type="text" name="nasc" id="nasc">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="resposta">
+    
+    </div>
+
+    <script>
+        function verificar() {
+            let pais = window.document.getElementById('nasc').value.trim() //.trim() vai remover espaços extras que possam interferir na comparação. E .value sempre vai acompanhar uma variável que está acessando um campo de input!
+            let resposta = window.document.getElementById('resposta')
+            // toLowerCase() vai garantir que se o usuário digitar brasil com letras maiúsculas e minúsculas, a nossa comparação funcione.
+            if (pais.toLowerCase() === 'Brasil') {
+                resposta.innerText = ` nasceu no ${pais}. Você é brasileiro!`
+            }
+            else {
+                resposta.innerText = `Você nasceu na(o) ${pais}`
+            }
+        }
+        
+
+    </script>
+</body>
+</html>

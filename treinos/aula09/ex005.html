@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: #447DC7;
+            color: white;
+            font: normal 25px Arial;
+        }
+
+        div#msg {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendoo a usar DOM em JavaScript</p>
+    <div id="msg" onclick="clicar()">
+        <p>Clique em mim</p>
+    </div>
+
+    <script>
+        // Com a variável
+        let p = window.document.getElementById('msg')
+        p.style.color = 'red'
+        p.style.background ='green'
+
+        // Sem a variável
+        // window.document.getElementById('msg').style.color = 'red'
+        // window.document.getElementById('msg').style.background = 'green'
+        
+        //função que dispara após clicar na div
+        function clicar (msg) {
+            p.style.color ='white'
+            p.style.background = 'black'
+            p.innerText = 'Clicou!'
+        }    
+        </script>
+</body>
+</html>

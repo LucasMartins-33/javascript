@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somador de Números</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+        input {
+            font: normal 20px arial;
+            width: 100px;
+        }
+
+        div#resultado {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somador de valores</h1>
+    <input type="number" name="n1" id="n1"> +
+    <input type="number" name="n2" id="n2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="resultado">
+        Resultado
+    </div>
+    <script>
+        
+        // as variáveis devem ser feitas dentro da função
+        function somar() {
+            let n1 = Number(window.document.getElementById('n1').value) // Sempre colocar .value em números
+            let n2 = Number(window.document.getElementById('n2').value)
+            let resultado = window.document.getElementById('resultado')
+            let soma = n1 + n2
+            resultado.innerHTML = `A soma entre os números ${n1} e ${n2} é igual a <strong>${soma}</strong>`
+        }
+    </script>
+</body>
+</html>

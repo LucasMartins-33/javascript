@@ -1,0 +1,44 @@
+@charset "UTF-8";
+:root {
+    --cor0: white;
+    --cor1: #094162;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, Sans-serif;
+    --fonte-footer: italic;
+}
+
+body {
+    background-color: var(--cor1);
+    font: var(--fonte-padrao);
+    font-size: 15pt;
+    font-weight: normal;
+}
+
+header {
+    text-align: center;
+    color: var(--cor0);
+    border: 500px;
+}
+
+section {
+    background-color: var(--cor0);
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.39);
+}
+
+div {
+    text-align: center;
+}
+
+div#foto {
+    margin-top: 10px;
+}
+
+footer {
+    font-style: var(--fonte-footer);
+    text-align: center;
+    color: var(--cor0);
+}
