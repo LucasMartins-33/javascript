@@ -3,8 +3,8 @@ function contar () {
     let fim = Number(window.document.querySelector('input#fim').value)
     let passo = Number(window.document.querySelector('input#passo').value)
     let resp = window.document.querySelector('div#resp')
-
-    if (inicio == '') {
+    // Verifica se o valor não é númerico
+    if (isNaN(inicio)) {
         resp.innerHTML = 'Impossível contar!'
     }
     else if (passo == 0) {
